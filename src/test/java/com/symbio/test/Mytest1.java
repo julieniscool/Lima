@@ -11,14 +11,12 @@ public class Mytest1 {
 	public void test() throws InterruptedException{
 		
 		WebDriver driver =  new FirefoxDriver();
-		String url = "http://www.amazon.ca";
+		String url = "http://www.amazon.es";
 		driver.get(url);
-		driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("iphone 6");
-		driver.findElement(By.cssSelector(".nav-submit-input")).click();
+		driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("galaxy note");
+		driver.findElement(By.cssSelector(".nav-input")).click();
 		Thread.sleep(10000);
 		driver.findElement(By.cssSelector("#result_0 a")).click();
-		for(String winHandle : driver.getWindowHandles())
-		    driver.switchTo().window(winHandle);
 		Thread.sleep(10000);
 		driver.findElement(By.cssSelector("#add-to-cart-button")).click();
 		Thread.sleep(10000);
